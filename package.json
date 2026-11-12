@@ -1,0 +1,44 @@
+{
+  "name": "pi-here",
+  "version": "0.1.0",
+  "description": "Per-folder launcher for the Pi coding agent: profiles, presets, confirm or edit in one key.",
+  "type": "module",
+  "bin": {
+    "pi-here": "bin/pi-here.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "README.es.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "test:tui": "python3 test/e2e/tui_pty.py"
+  },
+  "engines": {
+    "node": ">=20.12.0"
+  },
+  "keywords": [
+    "pi",
+    "pi-coding-agent",
+    "ollama",
+    "launcher",
+    "cli",
+    "tui"
+  ],
+  "author": "Federico Block",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedeblock/pi-here.git"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.9.0"
+  },
+  "homepage": "https://github.com/fedeblock/pi-here#readme",
+  "bugs": {
+    "url": "https://github.com/fedeblock/pi-here/issues"
+  }
+}

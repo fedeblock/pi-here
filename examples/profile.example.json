@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "preset": "build",
+  "model": "qwen3.8:27b",
+  "thinking": "low",
+  "tools": null,
+  "extensions": { "mode": "all", "load": [] },
+  "skills": { "mode": "only", "load": ["~/.pi/agent/skills/my-skill"] },
+  "contextFiles": true,
+  "extraArgs": []
+}

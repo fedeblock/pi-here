@@ -1,0 +1,71 @@
+{
+  "launcher": "ollama",
+  "ollamaArgs": [],
+  "defaultPreset": "build",
+  "presets": {
+    "quick": {
+      "thinking": "low",
+      "extensions": {
+        "mode": "only",
+        "load": [
+          "~/.pi/agent/extensions/permission-gate.ts",
+          "~/.pi/agent/extensions/protected-paths.ts"
+        ]
+      },
+      "skills": {
+        "mode": "only",
+        "load": []
+      }
+    },
+    "plan": {
+      "description": "Plan before touching code (needs @narumitw/pi-plan-mode)",
+      "thinking": "high",
+      "extensions": {
+        "mode": "only",
+        "load": [
+          "~/.pi/agent/npm/node_modules/@narumitw/pi-plan-mode/dist/index.ts"
+        ]
+      },
+      "skills": {
+        "mode": "only",
+        "load": []
+      }
+    },
+    "superpowers": {
+      "description": "Superpowers workflow with seven of its skills (needs @tsubus/pi-superpowers)",
+      "thinking": "medium",
+      "extensions": {
+        "mode": "only",
+        "load": [
+          "~/.pi/agent/npm/node_modules/@tsubus/pi-superpowers/vendor/superpowers/.pi/extensions/superpowers.ts"
+        ]
+      },
+      "skills": {
+        "mode": "only",
+        "load": [
+          "~/.pi/agent/npm/node_modules/@tsubus/pi-superpowers/vendor/superpowers/skills/using-superpowers",
+          "~/.pi/agent/npm/node_modules/@tsubus/pi-superpowers/vendor/superpowers/skills/brainstorming",
+          "~/.pi/agent/npm/node_modules/@tsubus/pi-superpowers/vendor/superpowers/skills/writing-plans",
+          "~/.pi/agent/npm/node_modules/@tsubus/pi-superpowers/vendor/superpowers/skills/executing-plans",
+          "~/.pi/agent/npm/node_modules/@tsubus/pi-superpowers/vendor/superpowers/skills/test-driven-development",
+          "~/.pi/agent/npm/node_modules/@tsubus/pi-superpowers/vendor/superpowers/skills/systematic-debugging",
+          "~/.pi/agent/npm/node_modules/@tsubus/pi-superpowers/vendor/superpowers/skills/verification-before-completion"
+        ]
+      }
+    },
+    "advisor": {
+      "description": "Ask a stronger model for a second opinion (needs @juicesharp/rpiv-advisor; may use a paid API)",
+      "thinking": "medium",
+      "extensions": {
+        "mode": "only",
+        "load": [
+          "~/.pi/agent/npm/node_modules/@juicesharp/rpiv-advisor/index.ts"
+        ]
+      },
+      "skills": {
+        "mode": "only",
+        "load": []
+      }
+    }
+  }
+}
